@@ -1854,7 +1854,10 @@ input, select, textarea {
 	text-align: left;
 	color: #EEF5EE
 }
+.resumeproject{
 
+	color: #EEF5EE
+}
 .work{
 	margin-top: 95px;
 }
