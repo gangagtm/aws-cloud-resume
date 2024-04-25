@@ -174,23 +174,27 @@
 								<h2><strong>The Cloud Resume Challenge</strong></h2>
 							</header>
 							<p style="color: #EEF5EE">
-								After I passed the AWS Solutions Architect Associate exam, I was looking for a project to work on. I had found The Cloud Resume Project before I passed my exam but I wasn’t confident enough to work on it then. Passing the exam boosted my confidence so I decided to work on this project to test my skills. 
+								After I passed the AWS Solutions Architect Associate exam, I was looking for a project to work on. I had found The Cloud Resume Project before I passed my exam but I wasn’t confident 
+								enough to work on it then. Passing the exam boosted my confidence so I decided to work on this project to test my skills.<br>
+								My journey began with creating a website using HTML and CSS. Initially, I crafted the design from scratch, but soon realized it was taking too much time. To streamline the process, I
+								opted for a template, allowing me to focus more on the cloud aspects of the project. Once HTML & CSS files were ready, I uploaded them to a S3 bucket. <br>
 
+								With the frontend sorted, I shifted my attention to securing the website and optimizing its performance. I purchased a domain from Route 53 and secured it with an Amazon Certificate.
+								To enhance loading speed, I set up a CloudFront distribution, connecting it to my S3 bucket and ensuring seamless delivery of website content.<br>
 
-								My journey began with creating a website using HTML and CSS. Initially, I crafted the design from scratch, but soon realized it was taking too much time. To streamline the process, I opted for a template, allowing me to focus more on the cloud aspects of the project. Once HTML & CSS files were ready, I uploaded them to a S3 bucket. 
+								The next step was creating a DynamoDB table to store the number of website visitors. Once I created the Dynamo table, I created a lambda function using python to get the number of visitors for my website.
+								I struggled a lot with the visitor count not reflecting on my website. It took a lot of googling and digging into threads to figure out what was going on.
+								Eventually, it all worked perfectly. <br>
 
-								With the frontend sorted, I shifted my attention to securing the website and optimizing its performance. I purchased a domain from Route 53 and secured it with an Amazon Certificate. To enhance loading speed, I set up a CloudFront distribution, connecting it to my S3 bucket and ensuring seamless delivery of website content.
+								I did all of the above using AWS console which was fairly simple. Now it was time for the most challenging part of the project, deploying infrastructure using IAAC. 
+								I wasn’t sure if I should use AWS SAM (Serverless Application Model) or terraform but I ultimately opted for AWS SAM. Despite investing considerable time in
+								understanding AWS SAM through documentation and tutorials, I was struggling to grasp it. It took a lot of trial and error to understand and implement AWS SAM. I successfully
+								deployed a DynamoDB table, API gateway and lambda function all using AWS SAM. I first did a test project because I did not want to mess up my functioning website. 
+								Once I was able to deploy the infrastructure for the test website, I replicated it for my actual website. <br>
 
-								The next step was creating a DynamoDB table to store the number of website visitors. Once I created the Dynamo table, I created a lambda function using python to get the number of visitors for my website. I struggled a lot with the visitor count not reflecting on my website. It took a lot of googling and digging into threads to figure out what was going on. Eventually, it all worked perfectly. 
-
-
-								I did all of the above using AWS console which was fairly simple. Now it was time for the most challenging part of the project, deploying infrastructure using IAAC. I wasn’t sure if I should use AWS SAM (Serverless Application Model) or terraform but I ultimately opted for AWS SAM.  
-
-								Despite investing considerable time in understanding AWS SAM through documentation and tutorials, I was struggling to grasp it. It took a lot of trial and error to understand and implement AWS SAM. I successfully deployed a DynamoDB table, API gateway and lambda function all using AWS SAM. I first did a test project because I did not want to mess up my functioning website. Once I was able to deploy the infrastructure for the test website, I replicated it for my actual website. 
-
-								I was familiar with Git and Github but I wasn’t familiar with Github actions. I created two workflows, one for the frontend and one for the backend. Using the Github actions, I setup CI/CD for my code. I struggled quite a bit with this part but it was very satisfying once it all worked out at the end. 
-
-								Working on this project was a great learning curve for me. I was able to enhance my existing skills and learn a lot of new skills. It also further enhanced my interest in AWS.
+								I was familiar with Git and Github but I wasn’t familiar with Github actions. I created two workflows, one for the frontend and one for the backend. Using the Github actions,
+								I setup CI/CD for my code. I struggled quite a bit with this part but it was very satisfying once it all worked out at the end. Working on this project was a great learning curve for me.
+								 I was able to enhance my existing skills and learn a lot of new skills. It also further enhanced my interest in AWS.
 							</p>
 					</section>
 			</div>
